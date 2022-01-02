@@ -1,0 +1,38 @@
+.footer-container {
+  display: flex;
+  min-height: 300px;
+  background-color: #112049;
+  justify-content: space-around;
+  align-items: center;
+  @media only screen and (max-width: 600px) {
+    flex-direction: column;
+  }
+}
+
+@supports not (-ms-ime-align: auto) {
+  .footer-container {
+    justify-content: space-evenly;
+  }
+}
+
+.footer-info-container {
+  display: flex;
+  flex-direction: column;
+  color: white;
+
+  @media only screen and (max-width: 1024px) {
+    text-align: center;
+    margin-left: 16px;
+    margin-right: 16px;
+    font-size: 18px;
+  }
+  p {
+    line-height: 24px;
+  }
+}
+.bottom-nav-link {
+  margin-bottom: 8px;
+  color: white;
+  text-decoration-line: none;
+  align-self: center;
+}

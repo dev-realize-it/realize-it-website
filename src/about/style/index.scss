@@ -1,0 +1,48 @@
+$mobile-width: 800px;
+$tablet-width: 1024px;
+
+#about {
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #1b3274;
+  h1 {
+    color: white;
+    font-size: 0px;
+
+    @media only screen and(max-width: $mobile-width) {
+      font-size: 24px;
+      align-self: center;
+    }
+
+    @media only screen and(max-width: $tablet-width) {
+      font-size: 40px;
+      align-self: center;
+      margin-bottom: 0px;
+    }
+  }
+
+  .info {
+    margin-top: 16px;
+    p {
+      color: white;
+      max-width: 1400px;
+
+      font-size: 32px;
+      @media only screen and(max-width: $mobile-width) {
+        font-size: 20px;
+      }
+
+      @media only screen and(max-width: $tablet-width) {
+        font-size: 20px;
+        align-self: center;
+        padding: 0px 16px;
+      }
+    }
+
+    .icon {
+      margin-right: 16px;
+      color: white;
+    }
+  }
+}

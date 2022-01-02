@@ -1,0 +1,39 @@
+.side-menu-container {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  align-items: center;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  // center it
+  top: 50%;
+  margin-top: -100px;
+  z-index: 1;
+  right: 16px;
+  justify-content: space-between;
+  height: 240px;
+  width: 40px;
+  border-radius: 20px;
+  background-color: white;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+  .indicators {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 8px;
+    padding-bottom: 8px;
+
+    .indicator {
+      background-color: lightgray;
+      width: 32px;
+      height: 32px;
+      border-radius: 16px;
+    }
+    .indicator-active {
+      background-color: #008df6;
+    }
+  }
+}

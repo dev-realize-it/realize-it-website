@@ -1,0 +1,62 @@
+$mobile-width: 800px;
+$tablet-width: 1024px;
+
+#contact {
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #008df6;
+  h1 {
+    color: white;
+    font-size: 80px;
+
+    @media only screen and(max-width: $mobile-width) {
+      font-size: 24px;
+      align-self: center;
+    }
+
+    @media only screen and(max-width: $tablet-width) {
+      font-size: 40px;
+      align-self: center;
+    }
+  }
+
+  .contact-info {
+    margin-top: 16px;
+    margin-bottom: 32px;
+    p {
+      color: white;
+      font-weight: 600;
+    }
+
+    .icon {
+      margin-right: 16px;
+      color: white;
+    }
+
+    .info-row {
+      display: flex;
+      align-items: center;
+      color: white;
+      font-size: 60px;
+      vertical-align: center;
+      @media only screen and(max-width: $mobile-width) {
+        font-size: 24px;
+      }
+
+      @media only screen and(max-width: $tablet-width) {
+        font-size: 32px;
+        align-self: center;
+      }
+    }
+    :hover {
+      cursor: pointer;
+    }
+  }
+  .send-mail {
+    color: white;
+    font-weight: bold;
+    font-size: 32px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+}
