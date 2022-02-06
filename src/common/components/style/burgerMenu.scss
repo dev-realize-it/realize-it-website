@@ -10,7 +10,6 @@
   background: transparent;
   border: none;
   cursor: pointer;
-  overscroll-behavior: contain;
   padding: 0;
   z-index: 12;
 
@@ -33,12 +32,11 @@
 #burger-overlay {
   position: fixed;
   overflow-y: hidden;
-  max-height: 100vh;
-  z-index: 2;
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
+  display: block;
   background: rgba(#008df6, 0.95);
   ul {
     align-self: center;
@@ -51,15 +49,13 @@
 }
 .hide {
   display: none;
-
   opacity: 0;
 }
 .fade-in {
   display: flex;
   visibility: visible;
-
   opacity: 1;
-  scale: 0;
+  scale: 1;
   animation: fade-in 0.6s linear;
 }
 

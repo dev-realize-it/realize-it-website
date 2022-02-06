@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import "./App.scss";
 import { BrowserRouter } from "react-router-dom";
 import Menu from "./common/components/menu";
@@ -16,8 +16,6 @@ import About from "./about";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 const App: React.FC = () => {
-  const [currentHash, setHash] = useState("");
-
   useEffect(() => {
     smooth.polyfill();
   }, []);

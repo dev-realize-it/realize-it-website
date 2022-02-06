@@ -8,19 +8,21 @@ const Burger: React.FC<{}> = () => {
   const [overlayClass, setOverlayClass] = useState("hide");
   const { hash } = useLocation();
 
-  useEffect(() => {
-    document.body.style.overflow = open ? "hidden" : "";
-  }, [open]);
-
   const toggleOverlay = () => {
-    setOverlayClass(!open ? "fade-in" : "fade-out");
     setOpen(!open);
   };
+
+  useEffect(() => {
+    setOverlayClass(open ? "fade-in" : "fade-out");
+    document.body.style.overflow = open ? "hidden" : "unset";
+  }, [open]);
 
   const goToTop = () => {
     window.scrollTo({ behavior: "smooth", top: 0 });
     toggleOverlay();
   };
+  const isActive = (link: string) => () => hash === link;
+
   return (
     <>
       <div id={`burger-overlay`} className={overlayClass}>
@@ -30,7 +32,7 @@ const Burger: React.FC<{}> = () => {
               smooth
               activeClassName="active-nav-link"
               className="nav-link"
-              isActive={() => hash === ""}
+              isActive={isActive("")}
               to="/"
               onClick={goToTop}
             >
@@ -41,7 +43,8 @@ const Burger: React.FC<{}> = () => {
             <Link
               smooth={true}
               to="#services"
-              isActive={() => hash === "#services"}
+              isActive={isActive("#services")}
+              activeClassName="active-nav-link"
               className="nav-link"
               onClick={toggleOverlay}
             >
@@ -52,7 +55,8 @@ const Burger: React.FC<{}> = () => {
             <Link
               smooth={true}
               to="#about"
-              isActive={() => hash === "#about"}
+              isActive={isActive("#about")}
+              activeClassName="active-nav-link"
               className="nav-link"
               onClick={toggleOverlay}
             >
@@ -62,8 +66,9 @@ const Burger: React.FC<{}> = () => {
           <li>
             <Link
               smooth={true}
-              isActive={() => hash === "#contact"}
+              isActive={isActive("#contact")}
               to="#contact"
+              activeClassName="active-nav-link"
               className="nav-link"
               onClick={toggleOverlay}
             >

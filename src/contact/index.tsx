@@ -30,7 +30,7 @@ const Contact: React.FC = () => {
         if (ref) observer.unobserve(ref);
       };
     }
-  }, [domRef, hash]);
+  }, [domRef, hash, history]);
 
   const iconSize = isMobile && !isTablet ? 24 : isTablet ? 28 : 64;
   return (

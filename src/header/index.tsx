@@ -27,7 +27,7 @@ const Header: React.FC = () => {
         if (ref) observer.unobserve(ref);
       };
     }
-  }, [domRef, hash]);
+  }, [domRef, hash, history]);
 
   return (
     <section id="header" ref={domRef}>

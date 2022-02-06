@@ -69,7 +69,7 @@ const Services: React.FC<{}> = () => {
       debounce((entries) => {
         entries.forEach((entry) => {
           if (hash === "#services") return;
-          if (entry.isIntersecting && entry.intersectionRatio >= 0.65)
+          if (entry.isIntersecting && entry.intersectionRatio >= 0.6)
             history.push("#services");
         });
       }, 300),
@@ -82,7 +82,7 @@ const Services: React.FC<{}> = () => {
         if (ref) observer.unobserve(ref);
       };
     }
-  }, [domRef, hash]);
+  }, [domRef, hash, history]);
 
   return (
     <section id="services" ref={domRef}>

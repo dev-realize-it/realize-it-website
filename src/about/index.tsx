@@ -29,7 +29,7 @@ const About: React.FC = () => {
         if (ref) observer.unobserve(ref);
       };
     }
-  }, [domRef, hash]);
+  }, [domRef, hash, history]);
   return (
     <>
       <Helmet>
