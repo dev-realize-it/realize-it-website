@@ -21,7 +21,7 @@ jobs:
       - name: 📂 Sync files
         uses: SamKirkland/FTP-Deploy-Action@4.2.0
         with:
-          server: www.topvormprefab.nl
+          server: www.realize-it.nl
           username: realize-it.nl
           password: ${{ secrets.ftp_password }}
           local-dir: ./build/
